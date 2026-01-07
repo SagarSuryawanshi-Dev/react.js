@@ -4,17 +4,18 @@ function App() {
   const [length, setLength] = useState(8);
   const [isNumber, setIsNumber] = useState(false);
   const [charAllow, setCharAllow] = useState(false);
-  const [password,setPaswword] = useState();
+  const [password,setPasword] = useState();
 
 
   // password generator method
 
   const passwordGenerator = useCallback(()=> {
+    // for now password is empty
+    let pass = "";
+    // data of password
+    let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  }, [length, isNumber,charAllow,] )
-
-
-
+  }, [length, isNumber, charAllow, setPasword] )
 
   return (
     <div className = "bg-black h-screen w-full">
